@@ -28,7 +28,7 @@ function VehicleRegistration(){
                             </tr>
                         </table>
 
-                        <Link to="/Pay" className="button">Update</Link>
+                        <Link to="/VehicleUpdate" className="button">Update</Link>
                         
                     </header>
                 </article>

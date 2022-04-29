@@ -9,8 +9,8 @@ import RealId from '../OnlineServices/RealId';
 import VitalRecord from '../OnlineServices/VitalRecord';
 import Selling from '../OnlineServices/Selling';
 import Titling from '../OnlineServices/titling';
-import Pay from '../OnlineServices/Pay';
 import Navbar from '../Routing/Navbar'
+import VehicleUpdate from '../OnlineServices/VehicleUpdate';
 export default function RouterPage(){
     return(
         <div>
@@ -26,7 +26,7 @@ export default function RouterPage(){
                     <Route path="/VitalRecord" element={<VitalRecord/>} />
                     <Route path="/Selling" element={<Selling/>} />
                     <Route path="/Titling" element={<Titling/>} />
-                    <Route path="/Pay" element={<Pay/>} />
+                    <Route path="/VehicleUpdate" element={<VehicleUpdate/>} />
                 </Routes>
             </Router>
         </div>

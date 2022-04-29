@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Pay(){
+function VehicleUpdate(){
     const [vin, setVin] = useState(null);
     const [pay, setPay] = useState(null);
     function getVin(val){
@@ -61,4 +61,4 @@ function Pay(){
     )
 }
 
-export default Pay; 
+export default VehicleUpdate; 
