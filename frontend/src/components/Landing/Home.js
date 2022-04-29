@@ -1,13 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import Navbar from '../Routing/Navbar';
 function Home(){
     return(
     <body class="homepage is-preload">
 		    <div id="page-wrapper">
 
 				<section id="header">
-				<img src={"./images/dmvLogo.png"} height={150}></img>
+				<img src={"./images/dmvLogo.png"}  alt="logo" height={150}></img>
 						<section id="banner">
 							<header>
 								<h2>Drive Safe</h2>

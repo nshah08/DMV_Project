@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
-
+import dmv from "./dmv";
+import web3 from "./web3";
 function VehicleUpdate(){
     const [vin, setVin] = useState(null);
     const [pay, setPay] = useState(null);
+    async function  test(){
+        const balance = await web3.eth.getBalance(dmv.options.address)
+    }
     function getVin(val){
         setVin(val.target.value)
     }

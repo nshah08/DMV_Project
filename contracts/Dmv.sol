@@ -3,6 +3,8 @@ pragma solidity ^0.8.9;
 
 contract DMV{
 
+    address public manager;
+
     struct registration{
         string vin;
         uint date;
@@ -17,6 +19,10 @@ contract DMV{
     
     struct dl{
         string dlid;
+    }
+
+    constructor(){
+        manager =msg.sender;
     }
 
     mapping(address=>registration) regs;
