@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-function ReportVehicle(){
+function RealId(){
     return(
         <body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -15,15 +15,15 @@ function ReportVehicle(){
                         <h2>Customer Information</h2>
                         <li/>
                         <span/>
-                       
+                        
                         <table>
                             <tr>
-                                <td><p><b>VIN</b></p></td>
+                                <td><p><b>Driver License Number</b></p></td>
                                 <td><p><b>xxxxxxx</b></p></td>
                             </tr>
                         </table>
 
-                        <button Link to ="#">Report</button>
+                        <button Link to ="#">Update</button>
                         
                     </header>
                 </article>
@@ -46,4 +46,4 @@ function ReportVehicle(){
     )
 }
 
-export default ReportVehicle; 
+export default RealId; 

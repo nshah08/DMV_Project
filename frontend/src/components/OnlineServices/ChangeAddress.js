@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-function ReportVehicle(){
+function ChangeAddress(){
     return(
         <body class="homepage is-preload">
 		<div id="page-wrapper">
 				<section id="header">
-                <img src={"./images/dmvLogo.png"} height={150}></img>
+
+						<img src={"./images/dmvLogo.png"} height={150}></img>
 
 				</section>
 
@@ -15,15 +16,15 @@ function ReportVehicle(){
                         <h2>Customer Information</h2>
                         <li/>
                         <span/>
-                       
+                        
                         <table>
                             <tr>
-                                <td><p><b>VIN</b></p></td>
+                                <td><p><b>Address</b></p></td>
                                 <td><p><b>xxxxxxx</b></p></td>
                             </tr>
                         </table>
 
-                        <button Link to ="#">Report</button>
+                        <button Link to ="#">Update Address</button>
                         
                     </header>
                 </article>
@@ -46,4 +47,4 @@ function ReportVehicle(){
     )
 }
 
-export default ReportVehicle; 
+export default ChangeAddress; 

@@ -7,40 +7,10 @@ function Home(){
 		    <div id="page-wrapper">
 
 				<section id="header">
-						<nav id="nav">
-							<ul>
-								<li class="current">
-									<Link to="/">Home</Link></li>
-                                
-								<li>
-								<Link to="/VehicleRegistration">Registration</Link>
-									<ul>
-										<li><a href="addresschange.html">Address Change</a></li>
-										<li><a href="DLRenew.html">Driver License Renew</a></li>
-										<li><a href="reportvehicle.html">Report a Vehicle</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Driver/ID Services</a>
-									<ul>
-										<li><a href="practice.html">Practice Exam</a></li>
-										<li><a href="realid.html">Real ID</a></li>
-										<li><a href="vital.html">Obtaining Vital Record</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Vehicle Services</a>
-									<ul>
-										<li><a href="selling.html">Selling/Donating</a></li>
-										<li><a href="titling.html">Titling</a></li>
-									</ul>
-								</li>
-                                
-							</ul>
-						</nav>
+				<img src={"./images/dmvLogo.png"} height={150}></img>
 						<section id="banner">
 							<header>
-								<h2>DMV</h2>
+								<h2>Drive Safe</h2>
 								<p style={{color:"deepskyblue"}}>Virginia Department of Motor Vehicle</p>
 							</header>
 						</section>
