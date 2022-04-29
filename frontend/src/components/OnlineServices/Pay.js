@@ -1,12 +1,20 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React, {useState} from 'react';
+
 function Pay(){
+    const [vin, setVin] = useState(null);
+    const [pay, setPay] = useState(null);
+    function getVin(val){
+        setVin(val.target.value)
+    }
+    function getPay(val){
+        setPay(val.target.value)
+    }
     return(
         <body class="homepage is-preload">
 		<div id="page-wrapper">
 				<section id="header">
 
-				<img src={"./images/dmvLogo.png"} height={150}></img>
+				<img src={"./images/dmvLogo.png"} alt ="logo" height={150}/>
 
 				</section>
 
@@ -19,17 +27,18 @@ function Pay(){
 						
                         <table>
                             <tr>
-                                <td><p><b>Driver License Number</b></p></td>
-                                <td><p><b>xxxxxxx</b></p></td>
+                                <td><p><b>VIN</b></p></td>
+                                <input type="text" onChange={getVin} />
                             </tr>
 
 							<tr>
                                 <td><p><b>Amount Need to Pay</b></p></td>
-                                <td><p><b>xxxxxxx</b></p></td>
+                                <input type="text" onChange={getPay} />
                             </tr>
                         </table>
 
-                        <button Link to ="#">Pay</button>
+                        <button onClick={()=>{
+                        }}>Pay</button>
                         
                     </header>
                 </article>

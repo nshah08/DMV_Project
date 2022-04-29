@@ -5,7 +5,7 @@ function VehicleRegistration(){
         <body class="homepage is-preload">
 		<div id="page-wrapper">
 				<section id="header">
-                <img src={"./images/dmvLogo.png"} height={150}></img>
+                <img src={"./images/dmvLogo.png"} alt ="logo" height={150}></img>
 
 				</section>
 
