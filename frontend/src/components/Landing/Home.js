@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Navbar from '../Routing/Navbar';
 function Home(){
     return(
     <body class="homepage is-preload">
