@@ -1,7 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
+
+
+
+
 function ChangeAddress(){
+
     return(
+        
         <body class="homepage is-preload">
 		<div id="page-wrapper">
 				<section id="header">
@@ -23,9 +30,8 @@ function ChangeAddress(){
                                 <td><p><b>xxxxxxx</b></p></td>
                             </tr>
                         </table>
-
-                        <button Link to ="#">Update Address</button>
                         
+                        <Link to="/AddressUpdate" className="button">Update Address</Link>                        
                     </header>
                 </article>
                 </div>

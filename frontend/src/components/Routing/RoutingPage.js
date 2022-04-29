@@ -11,6 +11,9 @@ import Selling from '../OnlineServices/Selling';
 import Titling from '../OnlineServices/titling';
 import Navbar from '../Routing/Navbar'
 import VehicleUpdate from '../OnlineServices/VehicleUpdate';
+import AddressUpdate from '../OnlineServices/AddressUpdate';
+import DLUpate from '../OnlineServices/DLUpdate';
+import ReportUpdate from '../OnlineServices/ReportUpdate';
 export default function RouterPage(){
     return(
         <div>
@@ -27,6 +30,9 @@ export default function RouterPage(){
                     <Route path="/Selling" element={<Selling/>} />
                     <Route path="/Titling" element={<Titling/>} />
                     <Route path="/VehicleUpdate" element={<VehicleUpdate/>} />
+                    <Route path="/AddressUpdate" element={<AddressUpdate/>} />
+                    <Route path="/DLUpdate" element={<DLUpate/>} />
+                    <Route path="/ReportUpdate" element={<ReportUpdate/>} />
                 </Routes>
             </Router>
         </div>

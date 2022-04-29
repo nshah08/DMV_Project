@@ -15,7 +15,7 @@ function RealId(){
                         <h2>Customer Information</h2>
                         <li/>
                         <span/>
-                        
+
                         <table>
                             <tr>
                                 <td><p><b>Driver License Number</b></p></td>
@@ -23,7 +23,7 @@ function RealId(){
                             </tr>
                         </table>
 
-                        <button Link to ="#">Update</button>
+                        <button Link to ="#">Next</button>
                         
                     </header>
                 </article>

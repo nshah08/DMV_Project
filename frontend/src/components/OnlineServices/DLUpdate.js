@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom'
 // import dmv from "./dmv";
 // import web3 from "./web3";
-function VehicleUpdate(){
+function DLUpate(){
+    const navigate = useNavigate();
     const [vin, setVin] = useState(null);
     const [pay, setPay] = useState(null);
     // async function  test(){
@@ -30,10 +32,6 @@ function VehicleUpdate(){
                         <span/>
 						
                         <table>
-                            <tr>
-                                <td><p><b>VIN</b></p></td>
-                                <input type="text" onChange={getVin} />
-                            </tr>
 
 							<tr>
                                 <td><p><b>Amount Need to Pay</b></p></td>
@@ -41,6 +39,8 @@ function VehicleUpdate(){
                             </tr>
                         </table>
 
+                        <button onClick={()=>navigate(-1)}>Cancel</button>
+                        <span/>
                         <button onClick={()=>{
                         }}>Pay</button>
                         
@@ -65,4 +65,4 @@ function VehicleUpdate(){
     )
 }
 
-export default VehicleUpdate; 
+export default DLUpate; 

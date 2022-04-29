@@ -1,11 +1,22 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
-function ReportVehicle(){
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom'
+
+function AddressUpdate(){
+    const navigate = useNavigate();
+    const [vin, setVin] = useState(null);
+    const [pay, setPay] = useState(null);
+    function getVin(val){
+        setVin(val.target.value)
+    }
+    function getPay(val){
+        setPay(val.target.value)
+    }
     return(
         <body class="homepage is-preload">
 		<div id="page-wrapper">
 				<section id="header">
-                <img src={"./images/dmvLogo.png"} height={150}></img>
+
+				<img src={"./images/dmvLogo.png"} alt ="logo" height={150}/>
 
 				</section>
 
@@ -15,15 +26,19 @@ function ReportVehicle(){
                         <h2>Customer Information</h2>
                         <li/>
                         <span/>
-                       
+						
                         <table>
                             <tr>
-                                <td><p><b>VIN</b></p></td>
-                                <td><p><b>xxxxxxx</b></p></td>
+                                <td><p><b>New Address</b></p></td>
+                                <input type="text" onChange={getVin} />
                             </tr>
-                        </table>
 
-                        <Link to="/ReportUpdate" className="button">Next</Link>
+                        </table>
+                        
+                        <button onClick={()=>navigate(-1)}>Cancel</button>
+                        <span/>
+                        <button onClick={()=>{
+                        }}>Pay</button>
                         
                     </header>
                 </article>
@@ -46,4 +61,4 @@ function ReportVehicle(){
     )
 }
 
-export default ReportVehicle; 
+export default AddressUpdate; 

@@ -15,7 +15,7 @@ function RenewDL(){
                         <h2>Customer Information</h2>
                         <li/>
                         <span/>
-                        
+
                         <table>
                             <tr>
                                 <td><p><b>Driver License Number</b></p></td>
@@ -28,7 +28,7 @@ function RenewDL(){
                             </tr>
                         </table>
 
-                        <Link to="/Pay" className="button">Update</Link>
+                        <Link to="/DLUpdate" className="button">Next</Link>
                         
                     </header>
                 </article>

@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
-// import dmv from "./dmv";
-// import web3 from "./web3";
-function VehicleUpdate(){
+import {useNavigate} from 'react-router-dom'
+
+function ReportUpdate(){
+    const navigate = useNavigate();
     const [vin, setVin] = useState(null);
     const [pay, setPay] = useState(null);
-    // async function  test(){
-    //     const balance = await web3.eth.getBalance(dmv.options.address)
-    // }
     function getVin(val){
         setVin(val.target.value)
     }
@@ -25,24 +23,22 @@ function VehicleUpdate(){
             <div class ="container">
                 <article class ="box post">
                     <header>
-                        <h2>Customer Information</h2>
+                        <h2>Car Status</h2>
                         <li/>
                         <span/>
 						
                         <table>
                             <tr>
-                                <td><p><b>VIN</b></p></td>
+                                <td><p><b>Sold or Trade?</b></p></td>
                                 <input type="text" onChange={getVin} />
                             </tr>
 
-							<tr>
-                                <td><p><b>Amount Need to Pay</b></p></td>
-                                <input type="text" onChange={getPay} />
-                            </tr>
                         </table>
-
+                        
+                        <button onClick={()=>navigate(-1)}>Cancel</button>
+                        <span/>
                         <button onClick={()=>{
-                        }}>Pay</button>
+                        }}>Update</button>
                         
                     </header>
                 </article>
@@ -65,4 +61,4 @@ function VehicleUpdate(){
     )
 }
 
-export default VehicleUpdate; 
+export default ReportUpdate; 
