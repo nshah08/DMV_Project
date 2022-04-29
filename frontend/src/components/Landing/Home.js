@@ -12,9 +12,8 @@ function Home(){
 									<Link to="/">Home</Link></li>
                                 
 								<li>
-								<Link to="#">Online Services</Link>
+								<Link to="/VehicleRegistration">Registration</Link>
 									<ul>
-										<li><Link to="/VehicleRegistration">Vehicle Registration</Link></li>
 										<li><a href="addresschange.html">Address Change</a></li>
 										<li><a href="DLRenew.html">Driver License Renew</a></li>
 										<li><a href="reportvehicle.html">Report a Vehicle</a></li>

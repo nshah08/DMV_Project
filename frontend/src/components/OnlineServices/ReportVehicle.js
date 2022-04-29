@@ -10,7 +10,7 @@ function VehicleRegistration(){
 								<li><Link to ="/">Home</Link></li>
 
 								<li class="current">
-									<Link to="/VehicleRegistration">Registration</Link>
+									<Link to="/VehicleRegistration">Online Services</Link>
 									<ul>
 										<li><a href="addresschange.html">Address Change</a></li>
 										<li><a href="DLrenew.html">Driver License Renew</a></li>
@@ -47,14 +47,9 @@ function VehicleRegistration(){
                                 <td><p><b>VIN</b></p></td>
                                 <td><p><b>xxxxxxx</b></p></td>
                             </tr>
-
-                            <tr>
-                                <td><p><b>Expire Date</b></p></td>
-                                <td><p><b>xxxxxxx</b></p></td>
-                            </tr>
                         </table>
 
-                        <button Link to="#">Update</button>
+                        <button Link="#">Update</button>
                         
                     </header>
                 </article>
@@ -77,4 +72,4 @@ function VehicleRegistration(){
     )
 }
 
-export default VehicleRegistration;
+export default VehicleRegistration; 
