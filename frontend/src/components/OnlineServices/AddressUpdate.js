@@ -35,7 +35,7 @@ function AddressUpdate(){
                         <button onClick={()=>navigate(-1)}>Cancel</button>
                         <span/>
                         <button onClick={()=>{
-                        }}>Pay</button>
+                        }}>Confirm</button>
                         
                     </header>
                 </article>
