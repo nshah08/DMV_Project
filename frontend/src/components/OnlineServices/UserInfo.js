@@ -1,13 +1,24 @@
 import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom'
-
-function AddressUpdate(){
-    const navigate = useNavigate();
+// import dmv from "./dmv";
+// import web3 from "./web3";
+function UserInfo(){
+    const [name, setName] = useState(null);
+    const [DOB, setDOB] = useState(null);
     const [address, setAddress] = useState(null);
+    // async function  test(){
+    //     const balance = await web3.eth.getBalance(dmv.options.address)
+    // }
+    function getName(val){
+        setName(val.target.value)
+    }
+
+    function getDOB(val){
+        setDOB(val.target.value)
+    }
+
     function getAddress(val){
         setAddress(val.target.value)
     }
-
     return(
         <body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -26,16 +37,23 @@ function AddressUpdate(){
 						
                         <table>
                             <tr>
-                                <td><p><b>New Address</b></p></td>
-                                <input type="text" onChange={getAddress} />
+                                <td><p><b>Enter Your Name</b></p></td>
+                                <input type="text" onChange={getName} />
                             </tr>
 
+                            <tr>
+                                <td><p><b>Enter Your Date of Birth</b></p></td>
+                                <input type="text" onChange={getDOB} />
+                            </tr>
+
+							<tr>
+                                <td><p><b>Enter Your Address</b></p></td>
+                                <input type="text" onChange={getAddress} />
+                            </tr>
                         </table>
 
-                        <button onClick={()=>navigate(-1)}>Cancel</button>
-                        <span/>
                         <button onClick={()=>{
-                        }}>Pay</button>
+                        }}>Confirm</button>
                         
                     </header>
                 </article>
@@ -58,4 +76,4 @@ function AddressUpdate(){
     )
 }
 
-export default AddressUpdate; 
+export default UserInfo; 

@@ -14,6 +14,7 @@ import VehicleUpdate from '../OnlineServices/VehicleUpdate';
 import AddressUpdate from '../OnlineServices/AddressUpdate';
 import DLUpate from '../OnlineServices/DLUpdate';
 import ReportUpdate from '../OnlineServices/ReportUpdate';
+import UserInfo from '../OnlineServices/UserInfo';
 export default function RouterPage(){
     return(
         <div>
@@ -33,6 +34,7 @@ export default function RouterPage(){
                     <Route path="/AddressUpdate" element={<AddressUpdate/>} />
                     <Route path="/DLUpdate" element={<DLUpate/>} />
                     <Route path="/ReportUpdate" element={<ReportUpdate/>} />
+                    <Route path="/UserInfo" element={<UserInfo/>} />
                 </Routes>
             </Router>
         </div>

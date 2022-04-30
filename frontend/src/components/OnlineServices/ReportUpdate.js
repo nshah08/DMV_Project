@@ -3,14 +3,11 @@ import {useNavigate} from 'react-router-dom'
 
 function ReportUpdate(){
     const navigate = useNavigate();
-    const [vin, setVin] = useState(null);
-    const [pay, setPay] = useState(null);
-    function getVin(val){
-        setVin(val.target.value)
+    const [status, setStatus] = useState(null);
+    function getStatus(val){
+        setStatus(val.target.value)
     }
-    function getPay(val){
-        setPay(val.target.value)
-    }
+
     return(
         <body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -30,7 +27,7 @@ function ReportUpdate(){
                         <table>
                             <tr>
                                 <td><p><b>Sold or Trade?</b></p></td>
-                                <input type="text" onChange={getVin} />
+                                <input type="text" onChange={getStatus} />
                             </tr>
 
                         </table>

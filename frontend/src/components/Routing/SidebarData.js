@@ -6,6 +6,13 @@ export const SidebarData = [
         path: '/',
         cName: 'nav-text'
       },
+
+    {
+        title: 'Profile',
+        path: '/UserInfo',
+        cName: 'nav-text'
+    },
+
     {
         title: 'VehicleRegistration',
         path: '/VehicleRegistration',
