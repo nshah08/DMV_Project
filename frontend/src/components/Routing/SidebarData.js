@@ -9,31 +9,37 @@ export const SidebarData = [
 
     {
         title: 'Profile',
-        path: '/UserInfo',
+        path: '/Profile',
         cName: 'nav-text'
     },
 
     {
-        title: 'VehicleRegistration',
+        title: 'Vehicle Registration',
         path: '/VehicleRegistration',
         cName: 'nav-text'
     },
 
     {
-        title: 'Change Address',
-        path: '/ChangeAddress',
+        title: 'Address Information',
+        path: '/AddressInfo',
         cName: 'nav-text'
     },
 
     {
-        title: 'License Renew',
-        path: '/RenewDL',
+        title: "Driver License",
+        path: '/DLInfo',
         cName: 'nav-text'
     },
 
     {
         title: 'Report a Vehicle',
-        path: '/ReportVehicle',
+        path: '/ReportUpdate',
+        cName: 'nav-text'
+    },
+
+    {
+        title: 'Practice Exam',
+        path: '/PracticeExam',
         cName: 'nav-text'
     },
 

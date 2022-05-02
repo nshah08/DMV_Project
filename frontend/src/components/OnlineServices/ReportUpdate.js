@@ -1,11 +1,29 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom'
-
+import dmv from '../../dmv';
+import web3 from '../../web3';
 function ReportUpdate(){
     const navigate = useNavigate();
     const [status, setStatus] = useState(null);
-    function getStatus(val){
-        setStatus(val.target.value)
+    const [secondAddy, setSecondAddy] = useState(null);
+    const handleStatusChange = (event) => {
+        setStatus(event.target.value);
+    }
+
+    const Dropdown = ({ label, value, options, onChange }) => {
+        return (
+          <label>
+            {label}
+            <select value={value} onChange={onChange}>
+              {options.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
+            </select>
+          </label>
+        );
+      };
+      function getSecondAddy(val){
+        setSecondAddy(val.target.value)
     }
 
     return(
@@ -20,22 +38,36 @@ function ReportUpdate(){
             <div class ="container">
                 <article class ="box post">
                     <header>
-                        <h2>Car Status</h2>
-                        <li/>
+                        <h2>Report a Vehicle Sold</h2>
                         <span/>
 						
                         <table>
                             <tr>
-                                <td><p><b>Sold or Trade?</b></p></td>
-                                <input type="text" onChange={getStatus} />
+                                <td><p><b>Sold or Traded?</b></p></td>
+                                <Dropdown 
+                                options={[
+                                    {label: "Sold", value: 'Sold'},
+                                    {label: "Traded", value: 'Traded'}
+                                ]}
+                                value={status}
+                                onChange={handleStatusChange}
+                                />
+                            </tr>
+                            <tr>
+                                <td><p><b>Enter Address of New Car Owner</b></p></td>
+                                <input type="text" onChange={getSecondAddy} />
                             </tr>
 
                         </table>
                         
                         <button onClick={()=>navigate(-1)}>Cancel</button>
                         <span/>
-                        <button onClick={()=>{
-                        }}>Update</button>
+                        <button onClick={async()=>{
+                            const accounts = await web3.eth.getAccounts();
+                            await dmv.methods.report(accounts[0], secondAddy).send({
+                                from: accounts[0]
+                            })
+                        }}>Report</button>
                         
                     </header>
                 </article>

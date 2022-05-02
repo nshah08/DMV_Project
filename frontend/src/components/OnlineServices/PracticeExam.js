@@ -1,50 +1,48 @@
 import React, {useState} from 'react';
-import dmv from '../../dmv';
 import web3 from '../../web3';
-function Selling(){
-    const [secondAddy, setSecondAddy] = useState(null);
-    const [amount, setAmount] = useState(null);
-    function getSecondAddy(val){
-        setSecondAddy(val.target.value)
-    }
-    function getAmount(val){
-        setAmount(val.target.value);
-    }
+import dmv from '../../dmv';
+function PracticeExam(){
+    const [visible, setVisible] = useState(false);
+    const pay = '0.035760';
+
     return(
         <body class="homepage is-preload">
 		<div id="page-wrapper">
 				<section id="header">
-                <img src={"./images/dmvLogo.png"} alt ="logo" height={150}/>
+                <img src={"./images/dmvLogo.png"} alt ="logo" height={150}></img>
 
 				</section>
 
             <div class ="container">
                 <article class ="box post">
                     <header>
-                        <h2>Selling a Vehicle</h2>
+                        <h2>Obtain a Practice Exam</h2>
                         <span/>
                         
                         <table>
-                            <tr>
-                                <td><p><b>Enter Address of New Car Owner</b></p></td>
-                                <input type="text" onChange={getSecondAddy} />
+                        <tr>
+                                <td><p><b>Amount Need to Pay</b></p></td>
+                                <td><p><b></b>0.035760 ETH</p></td>
                             </tr>
-                            <tr>
-                                <td><p><b>Amount Payed</b></p></td>
-                                <input type="text" onChange={getAmount} />
-                            </tr>
+                        <tr>
+                        <a href="/PracticeExam.pdf" download="PracticeExam.pdf" style={{display: visible ? 'block' : 'none'}}> Practice Exam </a>
+                        </tr>
                         </table>
 
                         <button onClick={async()=>{
                             const accounts = await web3.eth.getAccounts();
-                            await dmv.methods.sell(accounts[0], secondAddy, amount).send({
+                            await dmv.methods.pracexampay().send({
                                 from: accounts[0],
-                            }).then(console.log)
-                        }}>Update</button>
+                                value: web3.utils.toWei(pay, 'ether'),
+                            }).then(()=>{
+                                setVisible(true);
+                            })
+                        }}>Obtain</button>
                         
                     </header>
                 </article>
                 </div>
+
 				
 
 			
@@ -62,4 +60,4 @@ function Selling(){
     )
 }
 
-export default Selling; 
+export default PracticeExam; 
