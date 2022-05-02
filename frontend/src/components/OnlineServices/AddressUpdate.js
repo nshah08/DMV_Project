@@ -45,7 +45,7 @@ function AddressUpdate(){
                                 <td><p><b>Enter Your New Address</b></p></td>
                                 <input type="text" placeholder="Street" onChange={getStreet} />
                                 <br/>
-                                <input type="text" placeholder="City" onChange={getCity} />
+                                <input type="text" placeholder="City" onChange={getCity} /> 
                                 <br/>
                                 <input type="text" placeholder="State" onChange={getState} />
                                 <br/>
